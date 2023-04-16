@@ -31,12 +31,13 @@ export const findRemainingResources = async (uri) =>{
 
 
 export const findWeight = async (uri) => {
+    console.log(uri);
     try {
         const serverDetail = await serverDetails(uri);
 
         let usedResources = await findUsedResources(uri);
        
-        if (usedResources == 0)
+        if (usedResources === 0)
             usedResources = 1;
         const weightOfServer = usedResources * serverDetail.data.server_details.unit_power_cost;
         return weightOfServer;
@@ -47,7 +48,7 @@ export const findWeight = async (uri) => {
     }
 }
 
-const uri = 'http://localhost:4000';
-console.log(await findWeight(uri));
-console.log(await findRemainingResources(uri));
-console.log(await findUsedResources(uri));
+// const uri = 'http://localhost:4000';
+// console.log(await findWeight(uri));
+// console.log(await findRemainingResources(uri));
+// console.log(await findUsedResources(uri));

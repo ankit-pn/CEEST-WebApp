@@ -1,5 +1,4 @@
-import pkg from '@apollo/client';
-const { ApolloClient, InMemoryCache, gql } = pkg;
+import { ApolloClient, InMemoryCache, gql }  from '@apollo/client';
 
 export const vmDetails = async (uri) => {
     const client = new ApolloClient({

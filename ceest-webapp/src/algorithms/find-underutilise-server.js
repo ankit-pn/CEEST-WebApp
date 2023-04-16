@@ -1,6 +1,5 @@
 import { findRemainingResources, findUsedResources } from "./server-resources.js";
 
-import servers from './servers.json' assert {type:'json'};
 
 export const findUnderUtilise = async (servers) => {
 

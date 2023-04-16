@@ -1,7 +1,5 @@
 import { vmDetails } from './vm-details.js';
 import { populateVMWeights } from './vm-resources.js';
-import servers from './servers.json' assert {type: 'json'}
-import task from './task.json' assert {type: 'json'}
 import { serverDetails } from './server-details.js';
 import { findRemainingResources, findWeight } from './server-resources.js';
 export const findOptimalVm = async (task, servers) => {
@@ -25,10 +23,12 @@ export const findOptimalVm = async (task, servers) => {
                 if ((deadlineTime.getTime() - currentTime.getTime()) >= execTimeOfCurrTaskinMillSecond) {
                     if (!res['vm_id']) {
                         res = vm;
+                        res['uri']=server;
                     }
                     else {
                         if (vm['weight'] < res['weight']) {
                             res = vm;
+                            res['uri']=server;
                         }
                     }
                 }
