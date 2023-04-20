@@ -1,3 +1,4 @@
+import { Button } from '@mantine/core';
 import React from 'react';
 
 function ClearServersButton() {
@@ -6,7 +7,9 @@ function ClearServersButton() {
   }
 
   return (
-    <button onClick={handleClick}>Clear Server List</button>
+    <div style={{ paddingTop : '24px'}}>
+      <Button compact m='md' onClick={handleClick}>Clear Server List</Button>
+    </div>
   );
 }
 

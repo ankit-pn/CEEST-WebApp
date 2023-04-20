@@ -1,3 +1,4 @@
+import { Button } from '@mantine/core';
 import { useState } from 'react';
 import { addTask } from './graph-ql-mutation/addTask';
 
@@ -25,25 +26,30 @@ function TaskForm({ servers }) {
   }
 
   return (
+    <>
+    <h3> Schedule new Task to most Optimal VM </h3>
     <form onSubmit={handleSubmit}>
-      <label>
+      <label style={{display : 'block'}}>
         Task Name:
-        <input type="text" value={taskName} onChange={(e) => setTaskName(e.target.value)} />
+        <input style={{margin : '12px 8px'}} type="text" value={taskName} onChange={(e) => setTaskName(e.target.value)} />
       </label>
       <label>
         Task Length:
-        <input type="text" value={taskLength} onChange={(e) => setTaskLength(e.target.value)} />
+        <input style={{margin : '12px 8px'}} type="text" value={taskLength} onChange={(e) => setTaskLength(e.target.value)} />
       </label>
-      <label>
+      <label >
+        <span >
         Communication Cost:
-        <input type="text" value={communicationCost} onChange={(e) => setCommunicationCost(e.target.value)} />
+        </span>
+        <input style={{margin : '12px 8px'}} type="text" value={communicationCost} onChange={(e) => setCommunicationCost(e.target.value)} />
       </label>
       <label>
         Task Deadline:
-        <input type="text" value={taskDeadline} onChange={(e) => setTaskDeadline(e.target.value)} />
+        <input style={{margin : '12px 8px'}} type="text" value={taskDeadline} onChange={(e) => setTaskDeadline(e.target.value)} />
       </label>
-      <button type="submit">Add Your Task</button>
+      <Button compact mx='auto' sx={{display : 'block'}} type="submit">Add Your Task</Button>
     </form>
+    </>
   );
 }
 

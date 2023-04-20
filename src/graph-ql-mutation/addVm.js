@@ -2,8 +2,8 @@ import { findOptimalServer } from "../algorithms/vm-mapping";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
 export const addVm = async (vm, server) => {
-    console.log(vm);
-    console.log(server , typeof(server));
+    // console.log(vm);
+    // console.log(server , typeof(server));
     const optimalServer = await findOptimalServer(vm, {servers: server})
     console.log(optimalServer);
     const targetUri = optimalServer['uri'];
