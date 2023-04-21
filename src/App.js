@@ -22,7 +22,7 @@ function App() {
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover" }}>
     <div style={{ textAlign: 'center' }}>
-      <h3>CEEST - Cost Based Energy Efficient Scheduling And Cloud Computing</h3>
+      <h3>CEEST - Cost Based Energy Efficient Scheduling in Cloud Computing</h3>
     </div>
     <div>
       <Center m='md' style={{
