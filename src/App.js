@@ -2,10 +2,8 @@ import './App.css';
 import ServerForm from './ServerForm';
 import ServerList from './ServerList';
 import VmForm from './VmForm';
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import ClearServersButton from './ClearServersButton';
-import VmDetails from './vmDetails';
-import { vmDetails } from './algorithms/vm-details';
 import TaskForm from './TaskForm';
 import { Center } from '@mantine/core';
 // import SystemOptimisation from './systemOptimisation';
@@ -19,7 +17,10 @@ function App() {
  
 
   return (
-    <>
+    <div  style={{
+      backgroundImage: "url('https://www.powertecsolutions.net/wp-content/uploads/2019/05/form-background.png')",
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover" }}>
     <div style={{ textAlign: 'center' }}>
       <h3>CEEST - Cost Based Energy Efficient Scheduling And Cloud Computing</h3>
     </div>
@@ -73,7 +74,7 @@ function App() {
       
       
     </div>
-    </>
+    </div>
   );
 }
 

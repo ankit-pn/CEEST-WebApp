@@ -41,6 +41,6 @@ export const addVm = async (vm, server) => {
         variables: { input },
     });
     console.log(await data);
-    return await data.create_vm;
+    return await targetUri;
 }
 

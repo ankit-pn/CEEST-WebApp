@@ -16,6 +16,7 @@ function TaskForm({ servers }) {
       const res  = await addTask(task, JSON.parse(localStorage.getItem("servers")));
       console.log(res);
       console.log("here " , localStorage.getItem("servers"));
+      alert(`Task is added to VM with VM_ID = ${res['vm_id']} in server ${res['uri']}`);
       setTaskName('');
       setTaskLength('');
       setCommunicationCost('');

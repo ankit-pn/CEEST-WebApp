@@ -38,6 +38,6 @@ export const addTask = async (task, server) => {
         variables: { input },
     });
     console.log(await data);
-    return await data.create_vm;
+    return await optimalVm;
 }
 
